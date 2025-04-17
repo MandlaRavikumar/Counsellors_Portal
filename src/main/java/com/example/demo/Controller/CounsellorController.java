@@ -33,8 +33,7 @@ public class CounsellorController {
 	        return ResponseEntity.status(HttpStatus.CONFLICT).body("Email already exists. Please use a different email.");
 	    }
 	}
-
-    
+  
     @PostMapping("/login")
     public ResponseEntity<Counsellor> login(@RequestParam String email, @RequestParam String pwd){
     	Counsellor counsellor = counsellorService.login(email, pwd);
